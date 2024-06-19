@@ -1,5 +1,5 @@
 # occ1950_to_occscore
-What occscore does each occ1950 map to in the census data?
+What `occscore` value does each `occ1950` value map to in the census data?
 
 How I answer this: 
 
