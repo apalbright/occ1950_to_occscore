@@ -34,9 +34,9 @@ occ1950_occscore_1910_to_1940<-rbind(occ1950_occscore_1910,
                                      occ1950_occscore_1940)
 
 # are there multiple entries of occscore within occ1950 values?
-occ1950_occscore_1910_to_1940<-occ1950_occscore_1910_to_1940%>%distinct()
+occ1950_occscore_1910_to_1940<-occ1950_occscore_1910_to_1940%>%distinct()%>%arrange(occ1950)
 occ1950_occscore_1910_to_1940%>%group_by(occ1950)%>%mutate(n=n())%>%filter(n>1)%>%nrow()
-# confirmed that there are not (0 rows result)
+# confirmed that there are not ^ (0 rows result)
 
 # save the mapping from occ1950 to occscore as a csv
 occ1950_occscore_1910_to_1940%>%
